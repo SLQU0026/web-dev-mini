@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Protest+Strike&display=swap" rel="stylesheet">
+    <style>
+      
+      body {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        background-color: #c1e2df;
+      }
+
+      .pricing-container {
+        display: flex;
+        gap: 20px;
+
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .pricing-plan {
+  
+        box-shadow: 5px 10px 5px 0px #7b98a5;
+        height: 400px;
+        min-width: 300px;
+        border-radius: 50px;
+        flex-shrink: 0;
+        background-color: #f3fbff;
+      }
+
+      .plan-features {
+        list-style: none;
+      }
+
+      .plan-title, .plan-price, .plan-button {
+        text-align: center;
+      }
+
+      .plan-title {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight:bold;
+        
+        padding: 20px;
+        margin-bottom: 10px;
+        border-radius: 40px 40px 0px 0px;
+        color: rgb(255, 255, 255);
+      }
+
+      .pricing-plan > .plan-button {
+        font-size: 20px;
+        background: none;
+        border-radius: 30px;
+        padding: 10px;
+        
+      }
+
+      .plan-button {
+        font-size: 20px;
+        background: none;
+        border-radius: 30px;
+        padding: 10px;
+        
+      }
+
+      .plan-price {
+        font-family: "Protest Strike", sans-serif;
+
+      }
+
+      #basic-button {
+        border: 3px solid rgb(132, 186, 236);
+        color: rgb(132, 186, 236);
+      }
+
+      #standard-button {
+        border: 3px solid#ff7777;
+        color: #ff7777;
+      }
+
+      #premium-button {
+        border: 3px solid#ffd51bd3;
+        color: #ffd51bd3;
+      }
+      
+      #basic > .plan-title {
+        background-color: rgb(132, 186, 236);
+      }
+
+      #standard > .plan-title {
+        background-color: #ff7777;
+      }
+
+      #premium > .plan-title {
+        background-color: #fad42a;
+      }
+
+      .pricing-plan > .plan-button {
+        position: relative;
+        width: 120px;
+        top: 10%;
+        left: 90px;
+        text-align: center; 
+        font-family: "Bebas Neue", sans-serif;
+      }
+
+      li {
+        padding: 5px 30px;
+        margin-left: -40px;
+        color: #5e8991;
+      }
+
+      .price {
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      #basic > .plan-price {
+        color: rgb(132, 186, 236);
+      }
+
+      #standard > .plan-price {
+        color: #ff7777;
+      }
+      #premium > .plan-price {
+        color: #fad42a;
+      }
+      
+      .darker {
+        background-color: #d6dfe4;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+          height: 150vh;
+        }
+      }
+
+      @media (hover: hover) {
+        #basic-button:hover {
+          /* box-shadow: 0px 0px 20px 0px rgb(132, 186, 236); */
+          color: #f3fbff;
+          background-color: rgb(132, 186, 236);
+        }
+
+        #standard-button:hover {
+          /* box-shadow: 0px 0px 20px 0px #ff7777; */
+          color: #f3fbff;
+          background-color: #ff7777;
+        }
+
+        #premium-button:hover {
+          /* box-shadow: 0px 0px 20px 0px #FADC63; */
+          color: #f3fbff;
+          background-color: #FADC63;
+        }
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan" id="basic">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price"><span class="price">$9.99</span>/month</div>
+        <ul class="plan-features">
+          <li class="darker">✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li class="darker">❌ Support</li>
+        </ul>
+        <button class="plan-button" id="basic-button">Sign Up</button>
+      </div>
+
+      <div class="pricing-plan" id="standard">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price"><span class="price">$19.99</span>/month</div>
+        <ul class="plan-features">
+          <li class="darker">✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li class="darker">✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button" id="standard-button">Sign Up</button>
+      </div>
+
+      <div class="pricing-plan" id="premium">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price"><span class="price">$49.99</span>/month</div>
+        <ul class="plan-features">
+          <li class="darker">✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li class="darker">✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button" id="premium-button">Sign Up</button>
+      </div>
+  
+    </div>
+  </body>
+</html>
